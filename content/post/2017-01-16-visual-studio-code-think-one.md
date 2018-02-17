@@ -14,7 +14,7 @@ Before I get going, a point to make. This **isn't** a sponsored post at all and 
 For almost 10 years, I’ve worked with PHP and front-end tech only skimming other languages. Nothing major; small to large site development and app stuff. Recently I started a new job at [Dootrix][2] as a "software engineer". Whilst I do specialise in web development still, it’s starting to take some interesting turns. It's looking like I’ll be doing C# stuff, more advanced JavaScript and Python/Django as well plus carrying on PHP. (Aside, [Dootrix is looking for new staff][3])
 
 <div class="oversize">
-  <img src="/assets/blog/vsc.png" alt="Visual Studio Code" />
+  <img src="/images/blog/vsc.png" alt="Visual Studio Code" />
 </div>
 
 My code life is more open now.
