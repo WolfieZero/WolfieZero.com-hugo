@@ -1,5 +1,7 @@
-asset/scripts/
-asset/styles/
+assets/scripts/app.js.map
+assets/scripts/app.js
+assets/styles/app.css.map
+assets/styles/app.css
 node_modules/
 .cache/
 public/
