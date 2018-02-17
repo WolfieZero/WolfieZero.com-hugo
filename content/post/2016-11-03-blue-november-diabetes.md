@@ -19,9 +19,7 @@ On top of that I've got a few blog posts planned and if I get enough question (i
   * [Instagram][1]
   * [Twitter][3]
 
-Or you can use the [Ask Me Anything][4] page!
 
  [1]: https://www.instagram.com/wolfiezero/
  [2]: https://www.facebook.com/WolfieZero/
  [3]: https://twitter.com/WolfieZero/
- [4]: /ask-me-anything/
