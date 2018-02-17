@@ -1,0 +1,8 @@
+url: http://wolfiezero.com/
+title: WolfieZero.com
+description: 'Neil Sweeney - Web Developer, Video Gamer and Diabetic'
+paginate: 10
+baseURL: /
+staticDir:
+  - static
+  - assets

@@ -1,0 +1,53 @@
+// =============================================================================
+// Components >> Hero
+// =============================================================================
+
+.hero {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 2em;
+    padding-top: 2em;
+
+    // Height modifiers
+    // =========================================================================
+
+    &--full {
+        min-height: 100vh;
+    }
+
+    &--majority {
+        min-height: 75vh;
+    }
+
+    &--half {
+        min-height: 50vh;
+    }
+
+    &--minority {
+        min-height: 25vh;
+    }
+
+    &--big {
+        min-height: $base-line-height * 20;
+    }
+
+    // Elements
+    // =========================================================================
+
+    &__header,
+    &__footer {
+        flex-shrink: 0;
+    }
+
+    &__body {
+        align-items: center;
+        display: flex;
+        flex-grow: 1;
+    }
+
+    &__container {
+        flex-grow: 1;
+    }
+}

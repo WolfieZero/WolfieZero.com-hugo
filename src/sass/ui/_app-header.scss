@@ -1,0 +1,114 @@
+// =============================================================================
+// UI >> App Header
+// =============================================================================
+
+.app-header {
+    @include media('>=tablet') {
+        $padding-vertical:  .5em;
+
+        background-color: rgba($black, .75);
+        left: 0;
+        padding-bottom: $padding-vertical;
+        padding-top: $padding-vertical;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 9;
+
+        .container {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navigation {
+            @include normalize-font-size(14px);
+            line-height: 45px;
+            text-align: right;
+        }
+    }
+
+    &__logo {
+        border-bottom: 0;
+        display: inline-block;
+        height: 45px;
+        width: 45px;
+
+        &::before {
+            background-color: transparent;
+        }
+    }
+
+    @include media('<=tablet') {
+        &__logo {
+            position: absolute;
+            top: .5em;
+            z-index: 8;
+        }
+
+        .navigation {
+            @mixin display-nav {
+                display: flex;
+                opacity: 1;
+            }
+
+            background-color: rgba($color-brand-dark, .5);
+            padding-left: .5em;
+            padding-right: .5em;
+            position: fixed;
+            right: 1em;
+            top: 0;
+            z-index: 9;
+
+            &__list {
+                background-color: $color-brand-dark;
+                bottom: 0;
+                display: none;
+                flex: 1;
+                flex-direction: column;
+                justify-content: space-around;
+                left: 0;
+                opacity: 0;
+                padding: 2em .5em;
+                position: fixed;
+                right: 0;
+                top: 0;
+                z-index: 9;
+
+                &::after {
+                    content: '╳';
+                    left: 1.5em;
+                    position: absolute;
+                    top: 1em;
+                }
+
+                &:focus,
+                &:active {
+                    @include display-nav;
+                }
+            }
+
+            &__item {
+                display: block;
+                font-size: 2em;
+                text-align: right;
+
+                &:last-child {
+                    &::after {
+                        content: ' /';
+                    }
+                }
+            }
+
+            &__button {
+                display: inline-block;
+
+                &:focus {
+                    ~ .navigation__list {
+                        @include display-nav;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+// =============================================================================
+// Base >> Button
+// =============================================================================
+
+button,
+.button {
+    background-color: $color-button-background;
+    border: 1px solid $color-button-border;
+    border-radius: .25em;
+    color: $color-button-font;
+    cursor: pointer;
+}

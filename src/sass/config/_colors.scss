@@ -1,0 +1,44 @@
+// =============================================================================
+// Config >> Colors
+// =============================================================================
+
+// Named
+// =============================================================================
+
+$black: #171717;
+$white: #efefef;
+$off-white: #d6d6d6;
+
+// Types
+// =============================================================================
+
+$color-brand: #a34d88;
+$color-brand-dark: #392330;
+// $color-brand: #AD0077;.
+
+$color-accessibility: #c09;
+
+$color-positive: #080;
+$color-negative: #f00;
+$color-neutral: #ff0;
+
+$color-debug: #c09;
+
+// Theme
+// =============================================================================
+
+$color-font: $white;
+$color-font-heading: $white;
+
+$color-background: $black;
+
+$color-link: darken($color-font, 10%);
+$color-link-hover: $color-brand;
+
+$color-button-background: #ccc;
+$color-button-border: #444;
+$color-button-font: $black;
+
+$color-input-background: $white;
+$color-input-border: #444;
+$color-input-font: $black;

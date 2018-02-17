@@ -1,0 +1,13 @@
+.pagination {
+    @include normalize-font-size(25px);
+    @include type-brand;
+
+    margin-top: 2em;
+    text-align: center;
+    text-transform: lowercase;
+
+    &__link {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}

@@ -1,0 +1,48 @@
+// =============================================================================
+// Base >> Links
+// =============================================================================
+
+@mixin no-link-decoration-blank {
+    border-bottom: transparent;
+}
+
+@mixin no-link-decoration-hover {
+    &::before {
+        background-color: transparent;
+    }
+}
+
+@mixin no-link-decoration {
+    @include no-link-decoration-blank;
+    @include no-link-decoration-hover;
+}
+
+a {
+    $transition: all .25s ease-in-out;
+
+    border-bottom: 1px solid $color-link;
+    color: $color-link;
+    position: relative;
+    text-decoration: none;
+    transition: $transition;
+
+    &::before {
+        background-color: $color-link-hover;
+        bottom: -1px;
+        content: '';
+        height: 1px;
+        left: 0;
+        position: absolute;
+        transition: $transition;
+        width: 0;
+    }
+
+    &:focus,
+    &:hover {
+        color: $color-link-hover;
+
+        &::before {
+            width: 100%;
+        }
+    }
+}

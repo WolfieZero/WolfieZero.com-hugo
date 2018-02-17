@@ -1,0 +1,50 @@
+// =============================================================================
+// UI >> App Footer
+// =============================================================================
+
+.app-footer {
+    @include type-brand;
+    margin-top: 5em;
+    padding-bottom: 2em;
+    text-align: center;
+
+    &__logo {
+        height: 50px;
+        margin-top: 2em;
+
+        path {
+            fill: $color-brand-dark;
+        }
+    }
+
+    &__copyright,
+    &__links {
+        line-height: 1em;
+        text-align: center;
+    }
+
+    &__copyright {
+        $size: 16px;
+        @include normalize-font-size($size);
+    }
+
+    &__links {
+        $size: 16px;
+        @include normalize-font-size($size);
+    }
+
+    &__icon {
+        @include no-link-decoration;
+        display: inline-block;
+        margin-left: 1em;
+        margin-right: 1em;
+        width: 25px;
+
+        > svg {
+            path,
+            circle {
+                fill: $color-brand-dark;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "wolfiezero.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/entry.js",
+  "sasslintConfig": ".sass-lint.yml",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server",
+    "build": "webpack -p",
+    "lint": "sass-lint -c .sass-lint.yml -v -q",
+    "install:hugo:mac": "brew update && brew install hugo",
+    "install:hygo:win": "choco install hugo -confirm",
+    "install:hugo:nix": "open https://gohugo.io/getting-started/installing/#linux"
+  },
+  "author": "Neil Sweeney",
+  "license": "MIT",
+  "browserslist": "last 2 versions, ie 10",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.39",
+    "@babel/preset-env": "^7.0.0-beta.39",
+    "@babel/register": "^7.0.0-beta.39",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "8.0.0-beta.0",
+    "child_process": "^1.0.2",
+    "concurrently": "^3.4.0",
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "gulp": "^3.9.1",
+    "hugo-bin": "^0.22.0",
+    "include-media": "^1.4.9",
+    "node-sass": "^4.7.2",
+    "normalize-scss": "^7.0.0",
+    "sass-ems": "^1.0.3",
+    "sass-lint": "^1.10.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.1",
+    "turbolinks": "^5.1.1",
+    "uglifyjs-webpack-plugin": "^1.1.8",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {
+    "webpack-dashboard": "^1.1.1"
+  }
+}

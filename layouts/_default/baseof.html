@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode | default "en" }}">
+<head>
+{{ partial "head" . }}
+</head>
+<body class="{{ block "body-class" . }}{{ end }}">
+
+    {{ block "header" . }}{{ partial "app-header.html" .}}{{ end }}
+
+    <main aria-role="main" class="{{ block "main-class" . }}{{end}}">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ block "footer" . }}{{ partial "app-footer.html" .}}{{ end }}
+
+    {{ partial "foot" . }}
+
+</body>
+</html>

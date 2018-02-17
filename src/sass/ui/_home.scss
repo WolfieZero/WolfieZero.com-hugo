@@ -1,0 +1,106 @@
+// =============================================================================
+// UI >> Home
+// =============================================================================
+
+.home {
+    $transition: .5s all ease-in-out;
+    $content-margin: 5em;
+
+    &__hero {
+        @include media('>=tablet') {
+            min-height: 50vh;
+        }
+
+        background: linear-gradient(
+            rgba($color-brand, .35),
+            rgba($color-brand, .1)
+        );
+        margin-bottom: $content-margin;
+        min-height: 100vh;
+        padding-bottom: 2em;
+        padding-top: 2em;
+
+    }
+
+    &__title {
+        @include normalize-font-size(55px);
+        line-height: 1em;
+        margin-bottom: 0;
+        margin-left: -.1em;
+        margin-top: 0;
+        position: relative;
+
+        &,
+        span {
+            transition: .25s color ease 0s;
+        }
+
+        @include media('>desktop') {
+            @include normalize-font-size(100px);
+
+            &::before,
+            &::after {
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                transition: .25s opacity ease;
+                user-select: none;
+            }
+
+            &::before {
+                color: $white;
+                content: 'Wolfie';
+            }
+
+            &::after {
+                color: $color-brand;
+                content: 'Zero';
+                left: 2.9em;
+            }
+
+            &:hover {
+                &,
+                span {
+                    color: transparent;
+                }
+
+                &::before,
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__blurb {
+        @include normalize-font-size(25px);
+        @include type-brand;
+
+        @include media('>=tablet') {
+            font-size: 1.35em;
+        }
+
+        @include media('>=desktop') {
+            margin-top: -.5em;
+        }
+
+        color: $off-white;
+        line-height: 1.5em;
+        margin-top: 0;
+    }
+
+    &__links {
+        @include type-brand;
+
+        letter-spacing: .1rem;
+        line-height: 1.5em;
+        margin-top: .5em;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .app-footer {
+        margin-top: $content-margin;
+    }
+}

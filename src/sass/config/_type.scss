@@ -1,0 +1,80 @@
+// =============================================================================
+// Config >> Type
+// =============================================================================
+// Keep consistant font styles throughout the site accessing mixins.
+
+// Vertical Rhythm
+// =============================================================================
+// Normalize will handle the vertical rhythm of the text using default values.
+// But if any of the values in this section are changes then vertical rhythm
+// will be affected and altered.
+// If you wish to completely manage text then you might want to leave these
+// values unchanged and manage the type in the base/_typography.scss file.
+
+$base-scale: 2;
+$base-unit: 'rem';
+$base-font-size: 18px;
+$base-line-height: $base-scale * $base-font-size;
+
+// These values, if uncommented, will trigger vertical rhythm
+// $h1-font-size: 43px;
+$h2-font-size: 28px;
+// $h3-font-size: 18px;
+// $h4-font-size: 16px;
+// $h5-font-size: 14px;
+// $h6-font-size: 13px;
+
+// List
+// =============================================================================
+
+$indent-amount: 1em;
+
+// Font
+// =============================================================================
+
+$font-faces: (
+    //FontName: '../fonts/font-group-folderfont-file',
+);
+
+$font-family-brand: 'Exo';
+$font-family-mono: 'Source Code Pro', monospace;
+$font-family-sans: 'Open Sans', sans-serif;
+$font-family-serif: serif;
+
+$base-font-family: $font-family-sans;
+$heading-font-family: $font-family-brand, $font-family-sans;
+
+// Style
+// =============================================================================
+
+@mixin type-base {
+    -webkit-font-smoothing: antialiased;
+    font-family: $base-font-family;
+    font-weight: 300;
+}
+
+@mixin type-brand {
+    font-family: $font-family-brand;
+    font-weight: 100;
+}
+
+@mixin type-code {
+    // -webkit-font-smoothing: subpixel-antialiased;
+    font-family: $font-family-mono;
+    font-weight: 300;
+}
+
+@mixin type-heading {
+    font-family: $heading-font-family;
+    font-weight: 100;
+    text-rendering: optimizelegibility;
+}
+
+// Set Type
+// =============================================================================
+
+@mixin set-type($font-size, $margin: 1 0) {
+    @include normalize-font-size($font-size);
+    @include normalize-line-height($font-size);
+    @include normalize-margin($margin, $font-size);
+}

@@ -1,0 +1,15 @@
+{{ define "main" }}
+    <article class="single">
+        <header class="single__header {{ if isset .Params "feature_image" }}single__header--image{{ end }}" {{ if isset .Params "feature_image" }}style="background-image: url('{{ .Params.feature_image }}');"{{ end }}>
+            <h1 class="single__title">{{ .Title }}</h1>
+            {{ if not .Date.IsZero }}
+                <p class="single__date">{{ .Date.Format "January 02 2006" }}</p>
+            {{ end }}
+        </header>
+        {{ $paginator := .Paginate (where .Site.Pages "Type" "=" "post") 10 }}
+        {{ range $paginator.Pages }}
+            {{ .Render "item" }}
+        {{ end }}
+        {{ partial "pagination.html" . }}
+    </article>
+{{ end }}

@@ -1,0 +1,14 @@
+// =============================================================================
+// Component >> Logo
+// =============================================================================
+
+.logo {
+    clip-rule: evenodd;
+    fill-rule: evenodd;
+    // stroke-linejoin: round;
+    // stroke-miterlimit: 1.41421;
+
+    path {
+        fill: darken($color-brand, 15%);
+    }
+}

@@ -1,0 +1,29 @@
+// =============================================================================
+// Webfont
+// =============================================================================
+
+$font-faces: () !default;
+
+// Mixin
+// =============================================================================
+
+@mixin webfont ($family, $asset) {
+    @font-face {
+        font-family: '#{$family}';
+        font-style: normal;
+        font-weight: normal;
+        src: url('#{$asset}.eot'),
+        url('#{$asset}.eot?#iefix') format('embedded-opentype'),
+        url('#{$asset}.woff2') format('woff2'),
+        url('#{$asset}.woff') format('woff'),
+        url('#{$asset}.ttf') format('truetype'),
+        url('#{$asset}.svg##{$family}') format('svg');
+    }
+}
+
+// Constructor
+// =============================================================================
+
+@each $family, $asset in $font-faces {
+    @include webfont($family, $asset);
+}

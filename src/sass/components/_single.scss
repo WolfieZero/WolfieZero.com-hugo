@@ -1,0 +1,98 @@
+// =============================================================================
+// Component >> Single
+// =============================================================================
+
+.single {
+    &__header {
+        @include normalize-rhythm(margin-bottom, 1, $h1-font-size);
+        @include normalize-rhythm(padding-top, 2, $h1-font-size);
+
+        @include media('>=tablet') {
+            @include normalize-rhythm(padding-top, 3, $h1-font-size);
+        }
+
+        background-image: linear-gradient(
+            rgba($color-brand, .35),
+            rgba($color-brand, .1)
+        );
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+        > {
+            h1,
+            p {
+                @each $media, $meta in $container {
+                    @if $media == 'base' {
+                        @include attribute-map($meta);
+                    } @else {
+                        @include media('>#{$media}') {
+                            @include attribute-map($meta);
+                        }
+                    }
+                }
+            }
+        }
+
+        &--image, {
+            @include normalize-rhythm(padding-top, 5, $h1-font-size);
+            @include normalize-rhythm(padding-bottom, 2, $h1-font-size);
+
+            &::before {
+                background-image: linear-gradient(
+                    rgba($black, .7),
+                    $color-background 90%
+                );
+                bottom: 0;
+                content: '';
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: 0;
+            }
+        }
+
+        &--large {
+            @include normalize-rhythm(padding-top, 8, $h1-font-size);
+            @include normalize-rhythm(padding-bottom, 5, $h1-font-size);
+        }
+
+        > * {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    &__title {
+        $size: 45px;
+        @include normalize-font-size($size);
+        @include normalize-line-height($size);
+        @include normalize-margin(0 0 1, $size);
+    }
+
+    &__date {
+        $size: 14px;
+        @include normalize-font-size($size);
+        @include normalize-line-height($size, -20px);
+        @include normalize-margin(-1 0 0, $size);
+    }
+
+    &__content {
+        > {
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            blockquote,
+            ul,
+            pre {
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 740px;
+                width: 90%;
+            }
+        }
+    }
+}

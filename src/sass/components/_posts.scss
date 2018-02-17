@@ -1,0 +1,67 @@
+// =============================================================================
+// Component >> Posts
+// =============================================================================
+
+.posts {
+    &__title {
+        @include normalize-font-size(40px);
+    }
+}
+
+.posts-item {
+    @include type-brand;
+    grid-template-columns: 5em auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__title {
+        @include normalize-font-size(30px);
+        margin: 0;
+    }
+
+    &__link {
+        border-bottom: 0;
+        display: block;
+        padding: .25rem;
+
+        &:hover {
+            background-color: rgba($color-brand, .5);
+            color: $white;
+
+            &::before {
+                background-color: transparent;
+                display: none;
+            }
+        }
+    }
+
+    &__date {
+        @include normalize-font-size(12px);
+        display: flex;
+        align-items: center;
+        padding: .25rem;
+    }
+
+    @include media('>tablet') {
+        display: grid;
+
+        &__link {
+            grid-column-start: 2;
+        }
+
+        &__date {
+            grid-row-start: 1;
+            grid-column-start: 1;
+        }
+
+    }
+}
+

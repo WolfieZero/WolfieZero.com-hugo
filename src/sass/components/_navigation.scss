@@ -1,0 +1,54 @@
+// =============================================================================
+// Component >> Navigation
+// =============================================================================
+
+.navigation {
+    &__button {
+        @include no-link-decoration;
+
+        border-bottom: 0;
+        display: none;
+        font-size: 3em;
+        line-height: 1em;
+    }
+
+    &__list {
+        @include list-unstyled;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    &__item {
+        @include list-item-horizontal;
+        @include type-brand;
+        letter-spacing: .1em;
+        line-height: 1.5em;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &::after {
+            content: ' /';
+        }
+
+        &:last-child {
+            &::after {
+                content: '';
+            }
+        }
+
+        @include media('>=desktop') {
+            margin-left: 1.5em;
+            margin-right: 1.5em;
+
+            &:not(:last-child) {
+                &::after {
+                    content: '';
+                }
+            }
+        }
+    }
+
+    &__link {
+        @include no-link-decoration-blank;
+    }
+}

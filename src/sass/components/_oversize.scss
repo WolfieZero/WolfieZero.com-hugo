@@ -1,0 +1,39 @@
+// =============================================================================
+// Component >> Oversize
+// =============================================================================
+
+.oversize {
+    margin-bottom: 2em;
+    margin-top: 2em;
+    position: relative;
+    width: 100%;
+
+    // &--fixed-height {
+    //     max-height: 60vh;
+    //     overflow: hidden;
+
+    //     img {
+    //         margin-top: -15%;
+    //         padding: 0;
+    //         position: relative;
+    //     }
+    // }
+
+    &--overlay {
+        &::after {
+            $base-bg-color--top: rgba($color-background, .2);
+            $base-bg-color--bottom: rgba($color-background, .9);
+            background-image: linear-gradient(
+                $base-bg-color--top,
+                $base-bg-color--bottom
+            );
+            content: ' ';
+            display: block;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+// =============================================================================
+// Normalizing
+// =============================================================================
+
+@include normalize(
+
+    document
+    // EFFECTS: html
+
+    sections
+    // EFFECTS: body, article, aside, footer, header,
+    //          nav, section, h1
+
+    // grouping
+    // EFFECTS: blockquote, figcaption, figure, hr, main,
+    //          figcaption, figure, hr, main, pre,
+    //          dl, dd, ol, ul,
+    //          ol ol, ol ul,
+    //          ul ol, ul ul
+
+    links
+    // EFFECTS: a
+
+    text
+    // EFFECTS: abbr[title], b, strong, code, kbd,
+    //          samp, dfn, mark, small, sub, sup
+
+    // embedded
+    // EFFECTS: audio, video, audio:not([controls]),
+    //          img, svg:not(:root)
+
+    // forms
+    // EFFECTS: input, optgroup, select, textarea, button
+    //          html [type="button"], [type="button],
+    //          [type="reset"], [type="submit"],
+    //          [type="checkbox"], [type="radio"],
+    //          [type="number"]::-webkit-inner-spin-button,
+    //          [type="number"]::-webkit-outer-spin-button,
+    //          [type="search"], [type="search"]::-webkit-search-cancel-button,
+    //          [type="search"]::-webkit-search-decoration,
+    //          ::-webkit-file-upload-button, fieldset,
+    //          legend, progress
+
+    // interactive
+    // EFFECTS: details, summary, menu
+
+    // scripting
+    // EFFECTS: canvas, template
+
+    // hidden
+    // EFFECTS: [hidden]
+
+);

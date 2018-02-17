@@ -1,0 +1,24 @@
+{{ define "body-class"}}home{{ end }}
+{{ define "main-class" }}posts{{ end }}
+
+{{ define "header" }}
+    <header class="hero hero--half home__hero">
+        <div class="hero__body">
+            <div class="container">
+                <h1 class="title home__title">Neil <span>Sweeney</span></h1>
+                <h3 class="home__blurb">{{ .Params.strap }}</h3>
+                {{ partial "navigation.html" }}
+            </div>
+        </div>
+    </header>
+{{ end }}
+
+{{ define "main" }}
+    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") 5 }}
+    {{ range $paginator.Pages }}
+        {{ .Render "item" }}
+    {{ end }}
+    <nav class="pagination">
+        <a href="/blog/">See all posts</a>
+    </nav>
+{{ end }}

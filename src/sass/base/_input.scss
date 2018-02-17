@@ -1,0 +1,11 @@
+// =============================================================================
+// Base >> Input
+// =============================================================================
+
+input,
+.input {
+    background-color: $color-input-background;
+    border: 1px solid $color-input-border;
+    color: $color-input-font;
+    font-family: $base-font-family;
+}
