@@ -15,12 +15,12 @@ module.exports = {
     devtool: 'source-map',
     target: 'web',
     devServer: {
-        contentBase: path.join(__dirname, 'demo'),
+        contentBase: path.join(__dirname, 'public'),
         compress: true,
         port: 1337,
         watchContentBase: true,
         before: () => {
-            spawn('hugo', ['-d', 'demo', '--ignoreCache', '-v', '-b', '/', '-w', '--cleanDestinationDir'], { stdio: 'inherit' });
+            spawn('hugo', ['-d', 'public', '--ignoreCache', '-v', '-b', '/', '-w', '--cleanDestinationDir'], { stdio: 'inherit' });
         },
     },
     module: {
