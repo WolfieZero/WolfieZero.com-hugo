@@ -15,7 +15,8 @@ The flow should be simple. If a request for "boom.wolfiezero.com" hits my server
 
 Within `/etc/nginx/sites-avaliable/` create a file called `zzzz-default` (so it's always at the end of the tree). Within that file add the following server block rule set:
 
-<pre><code class="conf">server {
+```nginx
+server {
     listen  [::]:80;
     listen  80;
 
@@ -24,7 +25,7 @@ Within `/etc/nginx/sites-avaliable/` create a file called `zzzz-default` (so it'
     root            /var/www/$file_path;
     index           index.html;
 }
-</code></pre>
+```
 
 Write that file and restart the Nginx service (`sudo service nginx restart`). Done!
 
